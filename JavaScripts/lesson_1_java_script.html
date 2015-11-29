@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Java Script Lesson #1</title>
+		
+		<script>
+			console.log( "\n|--- #Types ---|" );
+			
+			var n = 11.1;
+			var s = "abc";
+			var b = true;
+			var u = undefined;
+			var i = null;
+			
+			
+			console.log( typeof(n) );
+			console.log( typeof(s) );
+			console.log( typeof(b) );
+			console.log( typeof(u) );
+			console.log( typeof(i) );
+			
+			var o = {};
+			var f = function () {
+				console.log( "f");
+			};
+			var a = [];
+
+			console.log( typeof(o) );
+			console.log( typeof(f) );
+			console.log( typeof(a) );
+			
+			//////////////////////////////////
+			//////////////////////////////////
+			
+			// Car
+			console.log( "\n|--- #Car ---|" );
+			var car = {
+				speed: 110,
+				model: "BMW",
+				mileage: 120000,
+				year: 2000,
+				
+				go: function() {
+					console.log( " [car]     go: speed - " + this.speed );
+				},
+				sits: 4
+			};
+			
+			car.go();			
+			
+			
+			// Buss
+			console.log( "\n|--- #Buss ---|" );
+			var buss = {};
+			buss.speed = 90;
+			buss.model = "Bogdan";
+			buss.mileage = 120000,
+			buss.year = "1876",
+			
+			buss.go = function() {
+				console.log( " [buss]    go: speed - " + this.speed );
+			};
+			
+			buss.go();
+			
+			
+			//Bicycle
+			console.log( "\n|--- #Bicycle ---|" );
+			var bicycle = new Object();
+			bicycle.speed = 20;
+			
+			bicycle.go = function() {
+				console.log( " [bicucle] go: speed - " + this.speed );
+			};
+			
+			bicycle.go();
+			
+			
+			
+
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

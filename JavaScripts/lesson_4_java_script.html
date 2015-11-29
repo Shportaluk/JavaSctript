@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Java Script Lesson #4</title>
+		
+		<script>
+			var Car = function( model, speed ) {
+				this.model = model;
+				this.speed = speed;
+			};
+			
+			Car.prototype.go = function() {
+				console.log( "[car] go", this, arguments );
+				console.log( "Car " + this.model + " is going with ..." );
+			}
+			
+			var c = new Car ( "BMW", 110 );
+			var c2 = new Car ( "Nissan", 100 );
+			var c3 = new Car ( "Audi", 130 );
+			
+			c.go();
+			c2.go();
+			c3.go();
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

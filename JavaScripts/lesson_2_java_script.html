@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Java Script Lesson #2</title>
+		
+		<script>
+			var vehicle = {
+				speed: 1,
+				model: "BMW",
+				mileage: 120000,
+				year: 2000,
+				type_vehicle: "s",
+				
+				go: function() {
+					console.log( "[" + this.type_vehicle + "] go: speed - " + this.speed );
+				}
+			}
+			
+			var car = Object.create( vehicle );
+			var buss = Object.create( vehicle );
+			var bicycle = Object.create( vehicle );
+			
+			car.type_vehicle = "car";
+			buss.type_vehicle = "buss";
+			bicycle.type_vehicle = "bicucle";
+			
+			car.speed = 110;
+			buss.speed = 90;
+			bicycle.speed = 20;
+			
+			car.go();
+			buss.go();
+			bicycle.go();
+			
+			car.model = "Audi";
+			//delete car.model;
+			//car.hasOwnProperty( "model" ); // 
+			
+			for( var p in car ){
+				console.log( "+" + p + ": " + car[p] )
+			}
+			
+			var f = function() {
+				return {
+					a:1
+				};
+			}
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

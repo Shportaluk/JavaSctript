@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Java Script Lesson #3</title>
+		
+		<script>
+			var add = function( a, b ) {
+				console.log( "context - ", this, "\nparameters - ", arguments );
+				return a + b;
+			}
+			var car = {
+				speed: 110,
+				go: function() {
+					console.log( "[car] go", this, arguments );
+					console.log( "speed: " + this.speed );
+				}
+			};
+			var c = add( 1, 2 );
+			
+			var avg = function( ) {
+				console.log( "context - ", this, "\nparameters - ", arguments );
+				var sum = 0;
+				for( var num in arguments ) {
+					console.log( arguments[num] );
+					sum += arguments[num] ;
+				}
+				return sum / arguments.length;
+			}
+			
+			console.log( "\nAvg: ",  avg( 5, 10, 6 ) );
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
